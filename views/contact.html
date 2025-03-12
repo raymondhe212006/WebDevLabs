@@ -7,26 +7,31 @@
     <meta name="keywords" content="Carnegie Mellon University, Information Systems">
     <meta name="description" content="Raymond he professional website">
     <title>Raymond He</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body style="font-family: Arial">
-    <header>
+<body>
+    <header id="webname">
         <h1>Raymond He</h1>
-        <nav>
-            <a href="../index.html">Home</a> |
-            <a href="cv.html">CV</a> |
-            <a href="contact.html">Contact me</a> |
-            <a href="fun.html">For fun</a>
-        </nav>
     </header>
+    <nav>
+        <a href="../index.html">About</a> 
+        <a href="cv.html">Resume</a> 
+        <a href="contact.html">Contact Me</a> 
+        <a href="fun.html">For fun</a>
+    </nav>
     <div class="main">
         <h2>Contact Me</h2>
-        <form style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
-            <label for="Your name (required)">Name:</label>
+        <form>
+            <label for="name">Your Name (required):</label>
             <input type="text" id="name" name="name" required><br>
-            <label for="Your email">Email:</label>
+        
+            <label for="email">Your Email:</label>
             <input type="email" id="email" name="email" required><br>
-            <label for="Your comment">Comment:</label>
+        
+            <label for="comment">Your Comment:</label>
             <textarea id="comment" name="comment" required></textarea><br>
+        
             <input type="submit" value="Submit">
         </form>
         <table>
