@@ -64,5 +64,6 @@ function greetingFunc() {
     E.innerHTML = greeting + " my name is Raymond He";
 
 }
-
-document.addEventListener("DOMContentLoaded", greetingFunc);
+if (window.location.pathname.endsWith("index.html")) {
+    greetingFunc();
+}
