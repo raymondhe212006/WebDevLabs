@@ -65,6 +65,4 @@ function greetingFunc() {
 
 }
 
-if (window.location.pathname.endsWith("index.html")) {
-    greetingFunc();
-}
+greetingFunc();
