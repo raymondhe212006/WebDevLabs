@@ -64,6 +64,6 @@ function greetingFunc() {
     E.innerHTML = greeting + " my name is Raymond He";
 
 }
-if (window.location.pathname.endsWith("index.html")) {
+if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/") {
     greetingFunc();
 }
