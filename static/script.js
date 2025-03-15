@@ -42,26 +42,27 @@ findTheBanana(L2);
 L1.forEach(item => { if (item == "Banana") alert("We found a banana in the first array"); });
 L2.forEach(item => { if (item == "Banana") alert("We found a banana in the first array"); });
 
+
 function greetingFunc() {
     let d = new Date();
     let h = d.getHours();
-    let greeting;
+    let g;
 
     if(5<h && h<12){
-        greeting = "Good morning,";
+        g = "Good morning,";
     }
     else if(h<18){
-        greeting = "Good afternoon,";
+        g = "Good afternoon,";
     }
     else if(h<20){
-        greeting = "Good evening,";
+        g = "Good evening,";
     }
     else{
-        greeting = "Good night,";
+        g = "Good night,";
     }
 
     let E = document.getElementById("greeting");
-    E.innerHTML = greeting + " my name is Raymond He";
+    E.innerHTML = g + " my name is Raymond He";
 
 }
 greetingFunc();
