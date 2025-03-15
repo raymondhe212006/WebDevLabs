@@ -65,4 +65,4 @@ function greetingFunc() {
 
 }
 
-greetingFunc();
+document.addEventListener("DOMContentLoaded", greetingFunc);
