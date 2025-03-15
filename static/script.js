@@ -60,10 +60,11 @@ function greetingFunc() {
         greeting = "Good night,";
     }
 
-    if (window.location.href.includes("index.html")) {
-        let E = document.getElementById("greeting");
-        E.innerHTML = greeting+ " my name is Raymond He";
-    }
+    let E = document.getElementById("greeting");
+    E.innerHTML = greeting + " my name is Raymond He";
+
 }
 
-greetingFunc();
+if (window.location.pathname.endsWith("index.html")) {
+    greetingFunc();
+}
