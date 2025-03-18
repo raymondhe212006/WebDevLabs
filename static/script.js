@@ -77,24 +77,23 @@ function showList() {
     document.getElementById("showListBtn").style.display = "none";
 }
 
-if (window.location.pathname.includes("index.html") || window.location.endsWith("/")) {
-    greetingFunc();
-    $(document).ready(function(){
-        $("#readMore").click(function(){
-            $("#shortBio").hide();
-            $("#longBio").show();
-            $("#readMore").hide();
-            $("#readLess").show();
-        });
-    
-        $("#readLess").click(function(){
-            $("#longBio").hide();
-            $("#shortBio").show();
-            $("#readLess").hide();
-            $("#readMore").show();
-        });
+greetingFunc();
+$(document).ready(function(){
+    $("#readMore").click(function(){
+        $("#shortBio").hide();
+        $("#longBio").show();
+        $("#readMore").hide();
+        $("#readLess").show();
     });
-}
+
+    $("#readLess").click(function(){
+        $("#longBio").hide();
+        $("#shortBio").show();
+        $("#readLess").hide();
+        $("#readMore").show();
+    });
+});
+
 
 
 function validate() {
