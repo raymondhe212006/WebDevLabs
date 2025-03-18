@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Raymond He">
+    <meta name="keywords" content="Carnegie Mellon University, Information Systems">
+    <meta name="description" content="Raymond he professional website">
+    <title>Raymond He</title>
+    <link rel = "stylesheet" href="./static1/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="static1/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body onload="addYear()">
+    <header id="webname">
+        <h1>Raymond He</h1>
+    </header>
+    <nav>
+        <a href="index.html">About</a> 
+        <a href="views1/cv.html">Resume</a> 
+        <a href="views1/contact.html">Contact Me</a> 
+        <a href="views1/fun.html">For fun</a>
+    </nav>
+    <div class="main">
+        <h2 id="greeting">Loading...</h2>
+        <img src="static1/temp.jpeg" alt="Raymond He" style="width: 400px; height: auto;">
+        <p id="intro">I am a freshman Information Systems major at Carnegie Mellon University</p>
+
+        <div id="bio">
+            <p id="shortBio">I am passionate about software development, data analysis, and AI...</p>
+            <p id="longBio" style="display: none;">I am passionate about software development, data analysis, and AI. 
+               I enjoy creating projects that solve real-world problems. I specialize in web development, machine learning, 
+               and competitive programming.</p>
+            <div>
+                <button id="readMore">Read More</button>
+                <button id="readLess" style="display: none;">Read Less</button>
+            </div>
+            
+        </div>
+    </div>
+    <footer>
+        designed and coded by Raymond He ©<p id="copyYear"></p>
+    </footer>
+</body>
+
+</html>
