@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="../static/script.js" defer></script>
 </head>
-<body>
+<body onload="addYear()">
     <header id="webname">
         <h1>Raymond He</h1>
     </header>
@@ -23,14 +23,15 @@
     </nav>
     <div class="main">
         <h2>Things I love to do for fun</h2>
-        <ul>
+        <button id="showListBtn" onclick="showList()" style="display: block;">Click to see...</button>
+        <ul id="funList" style="display: none;">
             <li>Playing poker</li>
             <li>Squash</li>
             <li>Coding</li>
         </ul>
     </div>
     <footer>
-        © 2025 designed and coded by Raymond He
+        designed and coded by Raymond He ©<p id="copyYear"></p>
     </footer>
 </body>
 

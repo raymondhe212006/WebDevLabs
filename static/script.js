@@ -36,11 +36,11 @@ function findTheBanana(L) {
         }
     }
 }
-findTheBanana(L1);
-findTheBanana(L2);
+//findTheBanana(L1);
+//findTheBanana(L2);
 
-L1.forEach(item => { if (item == "Banana") alert("We found a banana in the first array"); });
-L2.forEach(item => { if (item == "Banana") alert("We found a banana in the first array"); });
+//L1.forEach(item => { if (item == "Banana") alert("We found a banana in the first array"); });
+//L2.forEach(item => { if (item == "Banana") alert("We found a banana in the first array"); });
 
 
 function greetingFunc() {
@@ -65,4 +65,75 @@ function greetingFunc() {
     E.innerHTML = g + " my name is Raymond He";
 
 }
-greetingFunc();
+
+
+function addYear() {
+    document.getElementById("copyYear").textContent = new Date().getFullYear();
+}
+
+function showList() {
+    document.getElementById("funList").style.display = "block";
+    document.getElementById("showListBtn").style.display = "none";
+}
+
+if (window.location.pathname.includes("index.html") || window.location.pathname === "/") {
+    greetingFunc();
+    $(document).ready(function(){
+        $("#readMore").click(function(){
+            $("#shortBio").hide();
+            $("#longBio").show();
+            $("#readMore").hide();
+            $("#readLess").show();
+        });
+    
+        $("#readLess").click(function(){
+            $("#longBio").hide();
+            $("#shortBio").show();
+            $("#readLess").hide();
+            $("#readMore").show();
+        });
+    });
+}
+
+
+function validate() {
+    let isValid = true;
+
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let comment = document.getElementById("comment");
+
+    let nameError = document.getElementById("nameError");
+    let emailError = document.getElementById("emailError");
+    let commentError = document.getElementById("commentError");
+    let errorDiv = document.getElementById("errorMessages");
+
+    resetErrors([nameError, emailError, commentError, errorDiv]);
+
+    if (!name.checkValidity()) {
+        nameError.textContent = "Name is required.";
+        isValid = false;
+    }
+
+    if (!email.checkValidity()) {
+        emailError.textContent = "Valid email is required.";
+        isValid = false;
+    }
+
+    if (!comment.checkValidity()) {
+        commentError.textContent = "Message is required.";
+        isValid = false;
+    }
+
+    if (!isValid) {
+        errorDiv.textContent = "⚠️ Please fix the errors above and try again.";
+    }
+
+    return isValid;
+}
+
+function resetErrors(elements) {
+    elements.forEach((el) => {
+        el.textContent = "";
+    });
+}

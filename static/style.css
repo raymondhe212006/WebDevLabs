@@ -38,11 +38,87 @@ form * {
     text-align: center;
 }
 
-.submit-btn {
-    background-color: #28a745; /* Change this hex color if needed */
+input[type="submit"] {
+    background-color: #92ad70;
+    color: white; 
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #7e9661; 
+}
+
+#copyYear {
+    display: inline;
+    margin: 0;
+    padding: 1;
+}
+
+#funList {
+    display: none;
+    list-style-type: disc;;
+    padding: 0;
+    margin: 0px 20px;
+}
+
+#showListBtn {
+    background-color: #92ad70;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: 10px 15px;
     cursor: pointer;
+    border-radius: 100px;
+    font-size: 15px;
+    margin: 10px 0;
+    width: 120px; 
+    height: 40px; 
+}
+
+#showListBtn:hover {
+    background-color: #7e9661;
+}
+
+#bio {
+    margin-top: 20px;
+}
+
+#readMore, #readLess {
+    background-color: #92ad70;
+    color: white;
+    border: none;
+    padding: 0px 0px;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 11px;
+    margin: 0px 0;
+    width: 70px; 
+    height: 20px; 
+}
+
+#readMore:hover, #readLess:hover {
+    background-color: #7e9661;
+}
+
+#bio p {
+    display: inline;
+    margin: 0; 
+    padding: 0;
+}
+
+#bio div {
+    margin: 5px 0; 
+    padding: 0;
+    display: block; 
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+    text-align: center;
 }

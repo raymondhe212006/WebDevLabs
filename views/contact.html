@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="../static/script.js" defer></script>
 </head>
-<body>
+<body onload="addYear()">
     <header id="webname">
         <h1>Raymond He</h1>
     </header>
@@ -23,18 +23,24 @@
     </nav>
     <div class="main">
         <h2>Contact Me</h2>
-        <form>
+        <form id="contactForm">
             <label for="name">Your Name (required):</label>
-            <input type="text" id="name" name="name" required><br>
-        
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required><br>
-        
-            <label for="comment">Your Comment:</label>
-            <textarea id="comment" name="comment" required></textarea><br>
-        
-            <input type="submit" value="Submit">
+            <input type="text" id="name" name="name" required>
+            <div id="nameError" class="error-message"></div>
+    
+            <label for="email">Your Email (required):</label>
+            <input type="email" id="email" name="email" required>
+            <div id="emailError" class="error-message"></div>
+    
+            <label for="comment">Your Message (required):</label>
+            <textarea id="comment" name="comment" required></textarea>
+            <div id="commentError" class="error-message"></div>
+    
+            <input type="submit" value="Submit" onclick="validate()">
         </form>
+        
+        <div id="errorMessages" class="error-message"></div>
+
         <table>
             <tr>
                 <th>Contact Method Description</th>
@@ -52,7 +58,7 @@
         </table>
     </div>
     <footer>
-        © 2025 designed and coded by Raymond He
+        designed and coded by Raymond He ©<p id="copyYear"></p>
     </footer>
 </body>
 
