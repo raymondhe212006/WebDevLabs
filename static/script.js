@@ -37,6 +37,11 @@ function findTheBanana(L) {
     }
 }
 
+//findTheBanana(L1);
+//findTheBanana(L2);
+
+//L1.forEach(item => { if (item == "Banana") alert("We found a banana in the first array"); });
+//L2.forEach(item => { if (item == "Banana") alert("We found a banana in the first array"); });
 
 
 function greetingFunc() {
