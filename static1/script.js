@@ -77,7 +77,7 @@ function showList() {
     document.getElementById("showListBtn").style.display = "none";
 }
 
-if (window.location.pathname.includes("index1.html") || window.location.pathname === "/") {
+if (window.location.pathname.includes("index.html") || window.location.pathname === "/") {
     greetingFunc();
     $(document).ready(function(){
         $("#readMore").click(function(){
