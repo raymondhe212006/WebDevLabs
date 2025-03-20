@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("copyYear").textContent = new Date().getFullYear();
     }
 
-    if ((window.location.pathname === "/" || window.location.pathname.includes("index.html")) && document.getElementById("greeting")) {
+    if ((window.location.pathname === "" || window.location.pathname.includes("index.html")) && document.getElementById("greeting")) {
         greetingFunc();
     }
 });
