@@ -78,23 +78,6 @@ function addYear() {
 // }
 
 
-$(document).ready(function(){
-    $("#readMore").click(function(){
-        $("#shortBio").hide();
-        $("#longBio").show();
-        $("#readMore").hide();
-        $("#readLess").show();
-    });
-
-    $("#readLess").click(function(){
-        $("#longBio").hide();
-        $("#shortBio").show();
-        $("#readLess").hide();
-        $("#readMore").show();
-    });
-});
-
-
 
 function validate() {
     let isValid = true;
@@ -170,5 +153,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if ((window.location.pathname === "" || window.location.pathname.includes("index.html")) && document.getElementById("greeting")) {
         greetingFunc();
+        $(document).ready(function(){
+            $("#readMore").click(function(){
+                $("#shortBio").hide();
+                $("#longBio").show();
+                $("#readMore").hide();
+                $("#readLess").show();
+            });
+        
+            $("#readLess").click(function(){
+                $("#longBio").hide();
+                $("#shortBio").show();
+                $("#readLess").hide();
+                $("#readMore").show();
+            });
+        });
     }
 });
