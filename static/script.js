@@ -144,15 +144,22 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     if (window.location.href.includes("fun.html")) {
-        document.getElementById("adviceButton").addEventListener("click", getAdvice);
+        let adviceButton = document.querySelector(".advice-button"); 
+        if (adviceButton) {
+            adviceButton.addEventListener("click", getAdvice);
+        }
     }
 
     if (document.getElementById("copyYear")) {
         document.getElementById("copyYear").textContent = new Date().getFullYear();
     }
 
-    if ((window.location.pathname === "" || window.location.pathname.includes("index.html")) && document.getElementById("greeting")) {
-        greetingFunc();
+    
+    if ((window.location.pathname === "WebDevLabs/" || window.location.pathname.includes("index.html")) && document.getElementById("greeting")) {
+        let greetingElement = document.getElementById("greeting");
+        if (greetingElement) {
+            greetingFunc();
+        }
         $(document).ready(function(){
             $("#readMore").click(function(){
                 $("#shortBio").hide();
