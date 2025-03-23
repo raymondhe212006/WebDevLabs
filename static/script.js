@@ -49,13 +49,13 @@ function greetingFunc() {
     let h = d.getHours();
     let g;
 
-    if(5<h && h<12){
+    if(5<=h && h<12){
         g = "Good morning,";
     }
-    else if(h<18){
+    else if(12<=h && h<18){
         g = "Good afternoon,";
     }
-    else if(h<20){
+    else if(18<=h && h<20){
         g = "Good evening,";
     }
     else{
