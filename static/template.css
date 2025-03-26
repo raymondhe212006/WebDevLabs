@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "nav nav"
+        "mainimg maincontent"
+        "bottomcontent bottomcontent"
+        "footer footer";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 80px 60px auto auto 60px;
+    gap: 10px;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.header {
+    grid-area: header;
+    background: #d8a7e0;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav {
+    grid-area: nav;
+    background: #f2b6c6;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    font-size: 18px;
+    position: relative;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.nav-links a.active {
+    color: #ffffff;
+    background-color: #c97ba7;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+.nav-links a:hover {
+    color: #ffffff;
+    background-color: #d185b5;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+#menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mainimg {
+    grid-area: mainimg;
+    background: #f4a07c;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.maincontent {
+    grid-area: maincontent;
+    background: #f8f5c2;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.bottomcontent {
+    grid-area: bottomcontent;
+    background: #a9e5a3;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.footer {
+    grid-area: footer;
+    background: #a5c7f1;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-areas: 
+            "header"
+            "nav"
+            "mainimg"
+            "maincontent"
+            "bottomcontent"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .nav{
+        min-height: 30px;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    #menu-icon {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Raymond He">
+    <meta name="keywords" content="Carnegie Mellon University, Information Systems">
+    <meta name="description" content="Raymond he professional website">
+    <title>Raymond He</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/fontawesome/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+</head>
+<body onload="addYear()">
+    <header id="webname">
+        <h1>Raymond He</h1>
+    </header>
+    <i class="fas fa-bars" id="menu-icon"></i>
+    <nav class="nav-links">
+        <a href="../index.html">About</a> 
+        <a href="cv.html">Resume</a> 
+        <a href="contact.html">Contact Me</a> 
+        <a href="fun.html">For fun</a>
+    </nav>
+    <div class="mainLayout">
+        <div id="item1">
+            <h2>Things I love to do for fun</h2>
+            <!-- <button id="showListBtn" onclick="showList()" style="display: block;">Click to see...</button> -->
+            <ul id="funList">
+                <li>Playing poker</li>
+                <li>Squash</li>
+                <li>Coding</li>
+            </ul>
+        </div>
+        <div id="item2">
+            <img src="../static/fun_image.png" alt="Fun Activity" class="funIMG">
+        </div>
+        <div id="item3">
+            <iframe class="videoFrame" width="560" height="315" 
+                src="https://www.youtube.com/embed/-J4jImDe7Xk?si=Agjunzr_-TbiFT2A" 
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div id="item4">
+            <div class="container">
+                <h2>Need Some Advice?</h2>
+                <p id="adviceText">Click the button to get a random piece of advice!</p>
+                <button class="advice-button" onclick="getAdvice()">Get Advice</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        designed and coded by Raymond He ©<p id="copyYear"></p>
+    </footer>
+</body>
+
+</html>
