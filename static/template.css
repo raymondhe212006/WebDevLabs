@@ -127,7 +127,7 @@ body {
         grid-template-rows: auto;
     }
     .nav{
-        min-height: 30px;
+        min-height: 35px;
     }
     .nav-links {
         display: none;
